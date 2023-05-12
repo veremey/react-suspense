@@ -1,14 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import Lesson from './app.js'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 // ↓↓↓ 👋 Update this line to change the lesson number ↓↓↓
-import Lesson from "./lessons/complete/app";
+// import Lesson from "./lessons/complete/app";
 
 function App() {
-  return <Lesson />;
+	return <Lesson />
 }
 
-const rootElement = document.getElementById("root");
+const rootElement = document.getElementById('root')
 
 // ReactDOM.render(<App />, rootElement); // Blocking Mode
-ReactDOM.createRoot(rootElement).render(<App />); // Concurrent Mode
+ReactDOM.createRoot(rootElement).render(<App />) // Concurrent Mode
