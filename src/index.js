@@ -1,6 +1,6 @@
 import Lesson from './app.js'
 import React from 'react'
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom/client'
 
 // ↓↓↓ 👋 Update this line to change the lesson number ↓↓↓
 // import Lesson from "./lessons/complete/app";
