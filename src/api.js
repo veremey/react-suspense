@@ -1,3 +1,5 @@
+import sleep from 'sleep-promise'
+
 export const API_LINK = 'https://pokeapi.co/api/v2/pokemon/'
 
 export const suspensify = (promise) => {
@@ -29,4 +31,11 @@ export const suspensify = (promise) => {
 	}
 }
 
-export const fetchPokemon = (id) => fetch(`${API_LINK}${id}`).then((res) => res.json())
+export const fetchPokemon = (id) =>
+	fetch(`${API_LINK}${id}`).then((res) => res.json().then(sleep(1000)))
+
+export function fetchPokemonCollection() {
+	return fetch(`${API_LINK}`)
+		.then((res) => res.json())
+		.then(sleep(2000))
+}
